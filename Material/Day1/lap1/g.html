@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Your Name</title>
+  <meta name="description" content="Personal portfolio (EN/AR, RTL/LTR, dark mode). Pure HTML, CSS, JS." />
+
+  <!-- Modern font pairing: Inter (Latin) + IBM Plex Sans Arabic (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= Design Tokens ================= */
+    :root{
+      --bg:#FFFFFF; --text:#000000; --text-alt:#333333; --primary:#0087E9;
+      --muted-1:#F4F4F4; --muted-2:#B0B0B0; --radius:16px; --container:1200px;
+      --shadow-1:0 2px 8px rgba(0,0,0,.06); --shadow-2:0 8px 30px rgba(0,0,0,.08);
+      --s-1:4px; --s0:8px; --s1:12px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px;
+      --font-latin:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Noto Sans', sans-serif;
+      --font-ar:'IBM Plex Sans Arabic', 'Noto Kufi Arabic', 'Noto Naskh Arabic', Tahoma, Arial, sans-serif;
+    }
+    :root[data-theme="dark"]{ --bg:#121212; --text:#fff; --text-alt:#E0E0E0; --primary:#E72507; --muted-1:#1b1b1b; --muted-2:#444; --shadow-1:0 2px 8px rgba(0,0,0,.5); --shadow-2:0 8px 30px rgba(0,0,0,.6); }
+
+    /* ================= Base / Reset ================= */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family: var(--font-latin); background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+    html[lang="ar"] body{font-family: var(--font-ar)}
+    a{color:var(--primary);text-decoration:none}
+    img{max-width:100%;display:block}
+    button{font:inherit}
+    .container{max-width:var(--container);margin-inline:auto;padding-inline:var(--s3)}
+    .visually-hidden{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;margin:-1px;overflow:hidden;padding:0;border:0}
+
+    /* ================= Header ================= */
+    .site-header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--muted-2);background:rgba(255,255,255,.6);backdrop-filter:saturate(150%) blur(10px)}
+    :root[data-theme="dark"] .site-header{background:rgba(18,18,18,.6)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s3)}
+    .brand{display:flex;align-items:center;gap:var(--s1);font-weight:700}
+    .nav__links{display:flex;flex-wrap:wrap;gap:var(--s2)}
+    .nav__link{padding:8px 12px;border-radius:999px}
+    .nav__link:hover,.nav__link:focus{background:var(--muted-1)}
+    .controls{display:flex;align-items:center}
+
+    /* Segmented (glass) Dark/Lang */
+    .toggle-group{display:flex;border:1px solid var(--muted-2);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.4);backdrop-filter:blur(10px) saturate(140%);box-shadow:var(--shadow-1)}
+    :root[data-theme="dark"] .toggle-group{background:rgba(18,18,18,.4)}
+    .toggle-btn{flex:1;border:0;background:transparent;color:var(--text);padding:8px 16px;cursor:pointer;white-space:nowrap}
+    .toggle-btn:hover{background:var(--muted-1)}
+    .toggle-divider{width:1px;height:22px;background:var(--muted-2);opacity:.6}
+
+    /* ================= Hero ================= */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:var(--s4);padding-block:var(--s5)}
+    .hero__title{font-size:clamp(28px,4vw,48px);line-height:1.2;margin:0}
+    .hero__subtitle{font-size:clamp(14px,2.2vw,18px);color:var(--text-alt)}
+    .hero__cta{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s3)}
+
+    /* ================= Cards / Sections ================= */
+    .card{background:var(--bg);border:1px solid var(--muted-2);border-radius:var(--radius);box-shadow:var(--shadow-1);padding:var(--s3)}
+    section{scroll-margin-top:90px}
+    .section__title{font-size:24px;margin:0 0 var(--s2)}
+
+    /* ================= Grid ================= */
+    .grid{display:grid;gap:var(--s3)}
+    .grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+    /* Project */
+    .project{display:flex;flex-direction:column;gap:var(--s2)}
+    .project__thumb{aspect-ratio:16/10;border-radius:12px;overflow:hidden;border:1px solid var(--muted-2)}
+    .project__title{font-size:18px;margin:0}
+    .project__meta{font:12px/1.4 var(--font-latin);color:var(--text-alt)}
+
+    /* Footer */
+    .site-footer{border-top:1px solid var(--muted-2);padding-block:var(--s4);color:var(--text-alt)}
+
+    /* Buttons for CTA */
+    .btn{border:1px solid var(--muted-2);background:var(--bg);color:var(--text);padding:10px 14px;border-radius:999px;box-shadow:var(--shadow-1);cursor:pointer}
+    .btn:hover{box-shadow:var(--shadow-2)}
+
+    /* Responsive */
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr} .grid--3{grid-template-columns:repeat(2,minmax(0,1fr))} }
+    @media (max-width: 600px){ .grid--3{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <nav class="nav container" aria-label="Main Navigation">
+      <div class="brand" aria-label="Home">
+        <span aria-hidden="true">💼</span>
+        <span id="brand-text">Your Name</span>
+      </div>
+      <div class="nav__links" role="menubar">
+        <a class="nav__link" role="menuitem" href="#projects" data-i18n="nav.projects">Projects</a>
+        <a class="nav__link" role="menuitem" href="#about" data-i18n="nav.about">About</a>
+        <a class="nav__link" role="menuitem" href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="controls">
+        <div class="toggle-group" role="group" aria-label="View controls">
+          <button id="theme-toggle" class="toggle-btn" aria-pressed="false" data-i18n="controls.dark">Dark</button>
+          <div class="toggle-divider" aria-hidden="true"></div>
+          <button id="lang-toggle" class="toggle-btn" aria-pressed="false">AR</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero container" aria-label="Intro">
+      <div>
+        <h1 class="hero__title" data-i18n="hero.title">Hi, I'm Your Name — Front‑End Developer</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">I build fast, accessible websites and web apps with clean, scalable code.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#projects" data-i18n="hero.cta1">View Projects</a>
+          <a class="btn" href="#contact" data-i18n="hero.cta2">Hire Me</a>
+        </div>
+      </div>
+      <div class="card">
+        <p class="mb-2" data-i18n="hero.highlight">Available for freelance work</p>
+        <code class="block" style="display:block;white-space:pre-wrap" aria-label="Sample Code">/* Clean, scalable CSS */\n.card { border-radius: var(--radius); box-shadow: var(--shadow-1); }</code>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container py-4" aria-labelledby="projects-title">
+      <h2 class="section__title" id="projects-title" data-i18n="projects.title">Featured Projects</h2>
+      <div class="grid grid--3">
+        <article class="project card" aria-labelledby="p1-title">
+          <div class="project__thumb"><img loading="lazy" src="https://picsum.photos/640/400?1" alt="Project 1 screenshot"></div>
+          <h3 class="project__title" id="p1-title">E‑commerce UI</h3>
+          <div class="project__meta">HTML · CSS · JS</div>
+          <p data-i18n="projects.desc">Responsive storefront with accessible filters and cart interactions.</p>
+          <div><a class="nav__link" href="#" aria-label="Open project 1 repo">GitHub</a></div>
+        </article>
+        <article class="project card" aria-labelledby="p2-title">
+          <div class="project__thumb"><img loading="lazy" src="https://picsum.photos/640/400?2" alt="Project 2 screenshot"></div>
+          <h3 class="project__title" id="p2-title">Analytics Dashboard</h3>
+          <div class="project__meta">Vanilla JS</div>
+          <p data-i18n="projects.desc">Responsive storefront with accessible filters and cart interactions.</p>
+          <div><a class="nav__link" href="#">Live Demo</a></div>
+        </article>
+        <article class="project card" aria-labelledby="p3-title">
+          <div class="project__thumb"><img loading="lazy" src="https://picsum.photos/640/400?3" alt="Project 3 screenshot"></div>
+          <h3 class="project__title" id="p3-title">Portfolio Template</h3>
+          <div class="project__meta">HTML · CSS · JS</div>
+          <p data-i18n="projects.desc">Responsive storefront with accessible filters and cart interactions.</p>
+          <div><a class="nav__link" href="#">Download</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container py-4" aria-labelledby="about-title">
+      <h2 class="section__title" id="about-title" data-i18n="about.title">About Me</h2>
+      <div class="card">
+        <p data-i18n="about.body">I’m a front‑end developer focusing on performance and accessibility. I love building design systems and micro‑interactions.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container py-4" aria-labelledby="contact-title">
+      <h2 class="section__title" id="contact-title" data-i18n="contact.title">Contact</h2>
+      <form class="card" id="contact-form" novalidate>
+        <label class="mb-1" for="name" data-i18n="contact.name">Name</label>
+        <input id="name" name="name" required minlength="2" style="padding:10px;border:1px solid var(--muted-2);border-radius:8px;margin-bottom:var(--s2)" />
+
+        <label class="mb-1" for="email" data-i18n="contact.email">Email</label>
+        <input id="email" name="email" type="email" required style="padding:10px;border:1px solid var(--muted-2);border-radius:8px;margin-bottom:var(--s2)" />
+
+        <label class="mb-1" for="msg" data-i18n="contact.message">Message</label>
+        <textarea id="msg" name="msg" required rows="5" style="padding:10px;border:1px solid var(--muted-2);border-radius:8px;margin-bottom:var(--s2)"></textarea>
+
+        <button class="btn" type="submit" data-i18n="contact.send">Send</button>
+        <p id="form-status" role="status" class="mt-2" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> · <span data-i18n="footer.rights">All rights reserved.</span></small>
+    </div>
+  </footer>
+
+  <script>
+    ;(function(){
+      const STORAGE = { THEME:'portfolio-theme', LANG:'portfolio-lang' };
+      const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+      const themeBtn = document.getElementById('theme-toggle');
+      const langBtn = document.getElementById('lang-toggle');
+      const yearEl = document.getElementById('year');
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('form-status');
+
+      // Init
+      setTheme(localStorage.getItem(STORAGE.THEME) || (prefersDark ? 'dark' : 'light'));
+      setLanguage(localStorage.getItem(STORAGE.LANG) || (document.documentElement.lang || 'en'));
+      yearEl.textContent = new Date().getFullYear();
+
+      // Events
+      themeBtn.addEventListener('click',()=> setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
+      langBtn.addEventListener('click',()=> setLanguage(document.documentElement.lang==='ar'?'en':'ar'));
+
+      form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const data = new FormData(form);
+        const name=(data.get('name')||'').toString().trim();
+        const email=(data.get('email')||'').toString().trim();
+        const msg=(data.get('msg')||'').toString().trim();
+        if(name.length<2) return setStatus(t('errors.name'));
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return setStatus(t('errors.email'));
+        if(msg.length<5) return setStatus(t('errors.msg'));
+        form.reset(); setStatus(t('success'));
+      });
+
+      [themeBtn,langBtn].forEach(btn=>btn.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();btn.click();}}));
+
+      function setStatus(text){ statusEl.textContent = text; }
+      function setTheme(mode){
+        document.documentElement.dataset.theme = mode;
+        localStorage.setItem(STORAGE.THEME, mode);
+        themeBtn.setAttribute('aria-pressed', String(mode==='dark'));
+        themeBtn.textContent = mode==='dark'? t('controls.lightRaw'): t('controls.darkRaw');
+      }
+      function setLanguage(lang){
+        document.documentElement.lang = lang;
+        document.documentElement.dir = (lang==='ar')? 'rtl':'ltr';
+        localStorage.setItem(STORAGE.LANG, lang);
+        langBtn.textContent = lang==='ar'? 'EN':'AR';
+        langBtn.setAttribute('aria-pressed', String(lang==='ar'));
+        translatePage();
+      }
+      function translatePage(){
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const key = el.getAttribute('data-i18n');
+          const val = t(key);
+          if(typeof val==='string') el.textContent = val;
+        });
+      }
+      function t(key){
+        const dict = I18N[document.documentElement.lang] || {};
+        return key.split('.').reduce((a,k)=>a&&a[k], dict) || key;
+      }
+    })();
+
+    const I18N = {
+      en:{
+        nav:{projects:'Projects',about:'About',contact:'Contact'},
+        controls:{dark:'Dark',light:'Light',lightRaw:'Light',darkRaw:'Dark'},
+        hero:{title:"Hi, I'm Your Name — Front‑End Developer",subtitle:'I build fast, accessible websites and web apps with clean, scalable code.',cta1:'View Projects',cta2:'Hire Me',highlight:'Available for freelance work'},
+        projects:{title:'Featured Projects',desc:'Responsive storefront with accessible filters and cart interactions.'},
+        about:{title:'About Me',body:'I’m a front‑end developer focusing on performance and accessibility. I love building design systems and micro‑interactions.'},
+        contact:{title:'Contact',name:'Name',email:'Email',message:'Message',send:'Send'},
+        footer:{rights:'All rights reserved.'},
+        errors:{name:'Please enter a valid name.',email:'Please enter a valid email.',msg:'Please write a longer message.'},
+        success:'Thanks! Your message has been sent.'
+      },
+      ar:{
+        nav:{projects:'الأعمال',about:'من أنا',contact:'تواصل'},
+        controls:{dark:'داكن',light:'فاتح',lightRaw:'فاتح',darkRaw:'داكن'},
+        hero:{title:'مرحبًا، أنا فلان — مطوّر واجهات أمامية',subtitle:'أبني مواقع وتطبيقات سريعة وسهلة الوصول بكود نظيف وقابل للتوسع.',cta1:'شاهد الأعمال',cta2:'وظّفني',highlight:'متاح لأعمال حرة'},
+        projects:{title:'أعمال مختارة',desc:'واجهة متجر متجاوبة مع فلاتر وسلّة قابلة للوصول.'},
+        about:{title:'من أنا',body:'مطوّر واجهات أركز على الأداء وإمكانية الوصول. أحب بناء أنظمة تصميم وتفاصيل تفاعلية صغيرة.'},
+        contact:{title:'تواصل',name:'الاسم',email:'البريد الإلكتروني',message:'الرسالة',send:'إرسال'},
+        footer:{rights:'كل الحقوق محفوظة.'},
+        errors:{name:'من فضلك أدخل اسمًا صحيحًا.',email:'يرجى إدخال بريد إلكتروني صحيح.',msg:'اكتب رسالة أطول قليلًا.'},
+        success:'شكرًا! تم إرسال رسالتك.'
+      }
+    };
+  </script>
+</body>
+</html>
