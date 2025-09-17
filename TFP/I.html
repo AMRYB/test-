@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فريق العمل</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin: 30px 0;
+      color: #333;
+    }
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .member {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px;
+      transition: transform 0.3s;
+    }
+    .member:hover {
+      transform: translateY(-5px);
+    }
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .member h2 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+      color: #222;
+    }
+    .links a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #0077b5;
+      font-weight: bold;
+    }
+    .links a.github {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>فريق العمل</h1>
+  <div class="team-container">
+    
+    <!-- العضو الأول -->
+    <div class="member">
+      <img src="your-photo.jpg" alt="اسمك">
+      <h2>اسمك</h2>
+      <div class="links">
+        <a href="https://github.com/username" target="_blank" class="github">GitHub</a>
+        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- العضو الثاني -->
+    <div class="member">
+      <img src="friend1.jpg" alt="اسم العضو 2">
+      <h2>اسم العضو 2</h2>
+      <div class="links">
+        <a href="https://github.com/username2" target="_blank" class="github">GitHub</a>
+        <a href="https://linkedin.com/in/username2" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- العضو الثالث -->
+    <div class="member">
+      <img src="friend2.jpg" alt="اسم العضو 3">
+      <h2>اسم العضو 3</h2>
+      <div class="links">
+        <a href="https://github.com/username3" target="_blank" class="github">GitHub</a>
+        <a href="https://linkedin.com/in/username3" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
