@@ -3,7 +3,7 @@
 <!-- ============================== -->
 
 <div align="center">
-  <img height="200" alt="welcome banner" src="https://media.giphy.com/channel_assets/star-wars/L0TVPU6cLCIB/200h.gif" />
+  <img height="200" alt="welcome banner" src="https://media.giphy.com/channel_assets/star-wars/L0TVPU6cLCIB/200h.gif"/>
 </div>
 
 <br/>
