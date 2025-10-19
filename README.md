@@ -3,12 +3,20 @@
 <!-- ============================== -->
 
 <div align="center">
-  <img height="200" alt="welcome banner" src="https://media.giphy.com/channel_assets/star-wars/L0TVPU6cLCIB/200h.gif"/>
+  <img height="200" alt="welcome banner" src="https://media.giphy.com/channel_assets/star-wars/L0TVPU6cLCIB/200h.gif" />
 </div>
 
 <br/>
 
-<h1 align="left">I'm Amr Yasser</h1>
+<h1 align="left">I'm Amr Yasser
+
+<p align="right">
+  <code><a href="https://www.linkedin.com/in/osmandurdag/" title="LinkedIn Profile"><img width="22" src="./images/linkedin.svg"> LinkedIn</a></code>
+  <code><a href="https://www.hackerrank.com/zumrudu_anka" title="HackerRank Profile"><img width="22" src="images/hackerrank.png"> HackerRank</a></code>
+  <code><a href="https://stackoverflow.com/users/12578260/osman-durdag" title="Stack Overflow Profile"><img width="22" src="images/stackoverflow.svg"> Stack Overflow</a><
+  <code><a href="https://www.instagram.com/osman__durdag/" title="Instagram Profile"><img width="22" src="images/instagram.svg"> Instagram</a></code>
+  </p>
+</h1>
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=AMRYB.AMRYB" alt="visitor badge"/>
 
 A <b>Computer Science student</b> at <b>Helwan National University</b>,  
@@ -125,7 +133,7 @@ As a <b>Data Science student</b> at <b>Helwan National University</b>, I’ve wo
 <!--        COLLABORATORS           -->
 <!-- ============================== -->
 
-<h2 align="left">🤝 Collaborators & Teammates</h2>
+<h2 align="left">Collaborators & Teammates</h2>
 
 <p>
 I’ve been lucky to collaborate with amazing people during my academic and personal projects.  
@@ -133,38 +141,16 @@ Here are some of the talented developers and friends I worked with:
 </p>
 
 <p align="center">
-  <!-- بدّل usernames لأسامي زمايلك على GitHub عشان الصور تتسحب تلقائي -->
-  <a href="https://github.com/username1">
-    <img src="https://avatars.githubusercontent.com/username1" width="80" height="80" style="border-radius:50%; margin:5px;" alt="username1"/>
+  <a href="https://github.com/Yasmmiinaah">
+    <img src="https://avatars.githubusercontent.com/Yasmmiinaah" width="80" height="80" style="border-radius:50%; margin:5px;" alt="Yasmmiinaah"/>
   </a>
-  <a href="https://github.com/username2">
-    <img src="https://avatars.githubusercontent.com/username2" width="80" height="80" style="border-radius:50%; margin:5px;" alt="username2"/>
+  <a href="https://github.com/YOUSSEFGX">
+    <img src="https://avatars.githubusercontent.com/YOUSSEFGX" width="80" height="80" style="border-radius:50%; margin:5px;" alt="YOUSSEFGX"/>
   </a>
-  <a href="https://github.com/username3">
-    <img src="https://avatars.githubusercontent.com/username3" width="80" height="80" style="border-radius:50%; margin:5px;" alt="username3"/>
-  </a>
-</p>
-
-<p align="center"><i>Thanks for the teamwork and shared learning! 💪</i></p>
-
----
-
-<!-- ============================== -->
-<!--            CONTACT             -->
-<!-- ============================== -->
-
-<h2 align="left">📫 Connect with me</h2>
-
-<p>
-  <a href="mailto:your.email@example.com">
-    <img src="https://img.shields.io/badge/-Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-  <a href="https://www.linkedin.com/in/your-linkedin">
-    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="https://github.com/AMRYB">
-    <img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
+  <a href="https://github.com/Mo3tasemO">
+    <img src="https://avatars.githubusercontent.com/Mo3tasemO" width="80" height="80" style="border-radius:50%; margin:5px;" alt="Mo3tasemO"/>
   </a>
 </p>
 
+<p align="center"><i>Thanks for the teamwork and shared learning! </i></p>
 <!-- End -->
