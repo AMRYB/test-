@@ -14,6 +14,15 @@
   </p>
 </p>
 
+<div align="center">
+  <a href="mailto:amrybhh@gmail.com">
+    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo" />
+  </a>
+  <a href="https://www.linkedin.com/in/amryb/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo" />
+  </a>
+</div>
+
 ---
 
 ## Table of contents
@@ -25,8 +34,6 @@
 - [Notes](#notes)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
-- [License](#license)
-
 ---
 
 ## Quick start
@@ -155,12 +162,3 @@ Basic guidelines:
 * Keep UI changes consistent with the dashboard style
 * Avoid hard-coding text that might change on the website
 * Test on multiple terms (including repeated courses)
-
----
-
-## License
-
-MIT License. See `LICENSE`.
-
-```
-```
