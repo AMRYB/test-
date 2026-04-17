@@ -1,0 +1,238 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HNU Plaza | Filter</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload stylesheet" href="assets/css/style.css" as="style">
+  <link rel="preload stylesheet" href="assets/css/mobile.css" as="style">
+  <link rel="preload stylesheet" href="assets/css/global.css" as="style">
+  <link rel="preload stylesheet" href="assets/css/text.css" as="style">
+  <link rel="stylesheet" href="assets/css/pages/categories.css">
+</head>
+
+<body id="filter">
+
+  <header class="header">
+
+    <a href="shop.html" class="header__left-icon">
+      <img src="assets/svg/go-back.svg" alt="go back icon">
+    </a>
+
+    <h4 class="header__mdl-element">Filter</h4>
+  </header>
+
+
+  <main class="container">
+
+    <section class="status">
+
+      <ul class="status__list">
+
+        <li class="status__item">
+          <button class="status__button">
+            <div class="status__select active"></div>
+            <div class="status__text-wrapper">
+              <span class="status__text">sale</span>
+            </div>
+          </button>
+        </li>
+
+        <li class="status__item">
+          <button class="status__button">
+            <div class="status__select"></div>
+            <div class="status__text-wrapper">
+              <span class="status__text">new</span>
+            </div>
+          </button>
+        </li>
+
+        <li class="status__item">
+          <button class="status__button">
+            <div class="status__select"></div>
+            <div class="status__text-wrapper">
+              <span class="status__text">top</span>
+            </div>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="size">
+
+      <h5 class="size__title">Size</h5>
+
+      <ul class="size__list">
+        <li class="size__item">
+          <button class="size__btn">38</button>
+        </li>
+        <li class=" size__item">
+          <button class="size__btn active">39</button>
+        </li>
+        <li class="size__item">
+          <button class="size__btn">41</button>
+        </li>
+        <li class="size__item">
+          <button class="size__btn">42</button>
+        </li>
+        <li class="size__item">
+          <button class="size__btn">43</button>
+        </li>
+        <li class="size__item">
+          <button class="size__btn">44</button>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="color">
+      <h5 class="color__title">Color</h5>
+      <ul class="color__list">
+        <li class="color__item">
+          <button class="color__button">
+            <img class="color__check" src="assets/svg/color-check.svg" alt="color check">
+          </button>
+        </li>
+        <li class="color__item">
+          <button class="color__button"></button>
+        </li>
+        <li class="color__item">
+          <button class="color__button"></button>
+        </li>
+        <li class="color__item">
+          <button class="color__button"></button>
+        </li>
+        <li class="color__item">
+          <button class="color__button"></button>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="tag">
+      <h5 class="tag__title">Tags</h5>
+
+      <ul class="tag__list">
+
+        <li class="tag__item">
+          <button class="tag__button t12">Sneakers</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12 active">Loafers</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Boat Shoes</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Dress Shoes</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Orthopedic</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Derbies</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Sandals</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Flexible</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Cleaning Supplies</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Espadrilles</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Stylish</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Eco-Friendly</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Waterproof</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Oxfords</button>
+        </li>
+
+        <li class="tag__item">
+          <button class="tag__button t12">Comfortable</button>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="button-wrapper">
+      <div class="button-container">
+        <a href="shop.html" class="button">apply filters</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <div class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+    <div class="sidebar-header-wrapper">
+      <div class="sidebar-logo-line"></div>
+      <h2>Contact Us</h2>
+    </div>
+
+    <div class="sidebar-item">
+      <i class="fa-solid fa-location-dot icon"></i>
+      <div class="sidebar-item-text">
+        <span>Helwan National University</span>
+        <span>South of Helwan City,
+          Cairo Governorate</span>
+      </div>
+    </div>
+
+    <div class="sidebar-item">
+      <i class="fa-solid fa-envelope icon"></i>
+      <div class="sidebar-item-text">
+        <span>sale@hnu_plaza.com</span>
+        <span>support@hnu_plaza.com</span>
+      </div>
+    </div>
+
+    <div class="sidebar-item">
+      <i class="fa-solid fa-phone icon"></i>
+      <div class="sidebar-item-text">
+        <span>+20 1234567890</span>
+        <span>+20 9876543210</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/pages/filter.js"></script>
+
+</body>
+
+</html>

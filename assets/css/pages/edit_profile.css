@@ -1,0 +1,154 @@
+:root {
+   --bg-color: #f4f6f9;
+   --text-dark: #1b305b;
+   --text-gray: #7a8ba5;
+   --accent-red: #f03c3b;
+   --accent-yellow: #fbb117;
+   --nav-bg: #1f355d;
+   --border-color: #eaeff4;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Outfit', sans-serif;
+   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+   background-color: var(--bg-color);
+   display: flex;
+   justify-content: center;
+}
+
+.profile-container {
+   width: 100%;
+   max-width: 100%;
+   min-height: 100vh;
+   background-color: white;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+
+.top-nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 24px;
+   background-color: white;
+
+   margin-bottom: 10px;
+}
+
+.back-btn {
+   font-size: 22px;
+   color: var(--text-dark);
+   text-decoration: none;
+   width: 40px;
+}
+
+.top-nav h2 {
+   font-size: 18px;
+   font-weight: 500;
+   color: var(--text-dark);
+   text-align: center;
+   flex: 1;
+}
+
+.placeholder {
+   width: 40px;
+}
+
+
+.form-container {
+   padding: 24px;
+   flex: 1;
+}
+
+.input-group {
+   position: relative;
+   margin-bottom: 25px;
+}
+
+.input-group label {
+   position: absolute;
+   top: -8px;
+   left: 15px;
+   background: white;
+   padding: 0 5px;
+   font-size: 11px;
+   color: var(--text-gray);
+   font-weight: 500;
+   letter-spacing: 0.5px;
+}
+
+.input-group input {
+   width: 100%;
+   padding: 16px 20px;
+   border: 1px solid var(--border-color);
+   border-radius: 12px;
+   font-size: 16px;
+   color: var(--text-gray);
+   outline: none;
+   font-weight: 400;
+   transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+   border-color: var(--nav-bg);
+   color: var(--text-dark);
+}
+
+
+.bottom-action {
+   padding: 24px;
+   margin-top: auto;
+}
+
+.save-btn {
+   width: 100%;
+   background-color: var(--nav-bg);
+   color: var(--accent-yellow);
+   font-size: 16px;
+   font-weight: 600;
+   border: none;
+   padding: 18px;
+   border-radius: 12px;
+   cursor: pointer;
+   transition: background 0.2s;
+}
+
+.save-btn:hover {
+   background-color: #152542;
+}
+
+
+@media (min-width: 768px) {
+   .profile-container {
+      max-width: 800px;
+      margin: 0 auto;
+   }
+
+   .top-nav {
+      padding: 25px 0;
+   }
+
+   .form-container,
+   .bottom-action {
+      padding-left: 0;
+      padding-right: 0;
+   }
+}
+
+.u-inline-1 {
+   display: flex !important;
+   gap: 15px !important;
+}
+
+.u-inline-2 {
+   flex: 1 !important;
+}

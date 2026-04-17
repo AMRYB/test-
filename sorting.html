@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>HNU Plaza | Sorting</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+      <link rel="preload stylesheet" href="assets/css/style.css" as="style">
+      <link rel="preload stylesheet" href="assets/css/mobile.css" as="style">
+      <link rel="preload stylesheet" href="assets/css/global.css" as="style">
+      <link rel="preload stylesheet" href="assets/css/text.css" as="style">
+      <link rel="stylesheet" href="assets/css/pages/categories.css">
+   </head>
+   <body id="sorting">
+      <header class="header">
+         <a href="shop.html" class="header__left-icon">
+         <img src="assets/svg/go-back.svg" alt="go back icon">
+         </a>
+         <h4 class="header__mdl-element">Sorting</h4>
+      </header>
+      <main class="container">
+         <ul class="sorting__list">
+            <li class="sorting__item">
+               <button class="sorting__button">
+               <span class="t16">Sale</span>
+               <span class="circle"></span>
+               </button>
+            </li>
+            <li class="sorting__item">
+               <button class="sorting__button">
+               <span class="t16">Top</span>
+               <span class="circle active"></span>
+               </button>
+            </li>
+            <li class="sorting__item">
+               <button class="sorting__button">
+               <span class="t16">Newest</span>
+               <span class="circle"></span>
+               </button>
+            </li>
+            <li class="sorting__item">
+               <button class="sorting__button">
+               <span class="t16">Price: low to high</span>
+               <span class="circle"></span>
+               </button>
+            </li>
+            <li class="sorting__item">
+               <button class="sorting__button">
+               <span class="t16">Price: high to low</span>
+               <span class="circle"></span>
+               </button>
+            </li>
+         </ul>
+         <a href="shop.html" class="button">apply Sorting</a>
+      </main>
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+      <div class="sidebar" id="sidebar">
+         <button class="sidebar-close" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+         <div class="sidebar-header-wrapper">
+            <div class="sidebar-logo-line"></div>
+            <h2>Contact Us</h2>
+         </div>
+         <div class="sidebar-item">
+            <i class="fa-solid fa-location-dot icon"></i>
+            <div class="sidebar-item-text">
+               <span>Helwan National University</span>
+               <span>South of Helwan City,
+               Cairo Governorate</span>
+            </div>
+         </div>
+         <div class="sidebar-item">
+            <i class="fa-solid fa-envelope icon"></i>
+            <div class="sidebar-item-text">
+               <span>sale@hnu_plaza.com</span>
+               <span>support@hnu_plaza.com</span>
+            </div>
+         </div>
+         <div class="sidebar-item">
+            <i class="fa-solid fa-phone icon"></i>
+            <div class="sidebar-item-text">
+               <span>+20 1234567890</span>
+               <span>+20 9876543210</span>
+            </div>
+         </div>
+      </div>
+      <script src="assets/js/pages/sorting.js"></script>
+   </body>
+</html>

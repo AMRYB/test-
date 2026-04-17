@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HNU Plaza | Edit Profile</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/pages/edit_profile.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+  <div class="profile-container">
+
+
+    <nav class="top-nav">
+      <a href="profile.html" class="back-btn"><i class="fa-solid fa-chevron-left"></i></a>
+      <h2>Edit profile</h2>
+      <div class="placeholder"></div>
+    </nav>
+
+
+    <div class="form-container">
+
+      <div class="u-inline-1">
+        <div class="input-group u-inline-2">
+          <label>FIRST NAME</label>
+          <input type="text" value="Amr">
+        </div>
+        <div class="input-group u-inline-2">
+          <label>LAST NAME</label>
+          <input type="text" value="Yasser">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>EMAIL</label>
+        <input type="email" value="amr10tuf@gmail.com">
+      </div>
+
+      <div class="input-group">
+        <label>PHONE NUMBER</label>
+        <input type="tel" value="+20 1234567890">
+      </div>
+
+      <div class="input-group">
+        <label>LOCATION</label>
+        <input type="text" value="Cairo, Egypt">
+      </div>
+
+    </div>
+
+    <div class="bottom-action">
+      <button class="save-btn" data-click="window.location.href='profile.html'">Save Changes</button>
+    </div>
+
+  </div>
+
+  <script src="assets/js/inline-events.js"></script>
+</body>
+
+</html>

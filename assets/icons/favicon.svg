@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M 15 100 V 40 C 15 15, 45 15, 45 40 V 100" fill="none" stroke="#007BFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 55 100 V 40 C 55 15, 85 15, 85 40 V 100" fill="none" stroke="#007BFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Overlapping connector to look like the provided logo -->
+  <path d="M 45 60 C 45 40, 55 40, 55 60" fill="none" stroke="#007BFF" stroke-width="12" stroke-linecap="round"/>
+</svg>

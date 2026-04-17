@@ -1,0 +1,76 @@
+:root {
+   --main-color: #193364;
+   --text-color: #60708e;
+}
+
+h1 {
+   font-size: 32px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 700;
+   color: var(--main-color);
+   line-height: 1.2;
+}
+
+h2 {
+   font-size: 22px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 700;
+   color: var(--main-color);
+   line-height: 1.2;
+}
+
+h3 {
+   font-size: 20px;
+   color: var(--main-color);
+   line-height: 1.2;
+   font-family: "Mulish", sans-serif;
+   font-weight: 700;
+}
+
+h4 {
+   font-size: 18px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 600;
+   color: var(--main-color);
+   line-height: 1.2;
+}
+
+h5 {
+   font-size: 16px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 600;
+   color: var(--main-color);
+   line-height: 1.2;
+}
+
+.t10 {
+   font-size: 10px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 400;
+   color: var(--text-color);
+   line-height: 1.5;
+}
+
+.t12 {
+   font-size: 12px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 400;
+   color: var(--text-color);
+   line-height: 1.7;
+}
+
+.t14 {
+   font-size: 14px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 400;
+   color: var(--text-color);
+   line-height: 1.7;
+}
+
+.t16 {
+   font-size: 16px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 400;
+   color: var(--text-color);
+   line-height: 1.7;
+}

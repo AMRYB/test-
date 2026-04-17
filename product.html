@@ -1,0 +1,131 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HNU Plaza | Product</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/pages/product.css">
+</head>
+
+<body>
+
+  <div class="page-container">
+
+
+    <nav class="top-nav">
+
+      <a href="shop.html" class="back-btn mobile-only"><i class="fa-solid fa-arrow-left"></i></a>
+
+
+      <a href="index.html" class="desktop-logo-link">StepHub</a>
+      <ul class="desktop-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="u-inline-1">Shop</a></li>
+        <li><a href="404.html">Categories</a></li>
+        <li><a href="404.html">Contact</a></li>
+      </ul>
+
+
+      <div class="nav-actions">
+        <a href="profile.html" class="account-icon u-inline-2">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="cart.html" class="cart-icon">
+          <div class="cart-badge">0</div>
+          <i class="fa-solid fa-bag-shopping"></i>
+        </a>
+      </div>
+    </nav>
+
+    <div class="product-body">
+
+      <div class="image-viewer">
+        <img src="assets/images/sneaker.png" alt="product" class="main-image u-inline-3" id="mainImage">
+        <div class="thumbnails">
+          <div class="thumbnail active" data-click="changeImage(this, 'assets/images/sneaker.png')">
+            <img src="assets/images/sneaker.png" alt="thumb" class="u-inline-3">
+          </div>
+          <div class="thumbnail" data-click="changeImage(this, 'assets/images/baked.png')">
+            <img src="assets/images/baked.png" alt="thumb" class="u-inline-3">
+          </div>
+          <div class="thumbnail" data-click="changeImage(this, 'assets/images/cleaning.png')">
+            <img src="assets/images/cleaning.png" alt="thumb" class="u-inline-3">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="details-section">
+
+        <div class="title-row">
+          <h1>Sport Sneakers</h1>
+          <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="rating-row">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          <span>(23 Reviews)</span>
+        </div>
+
+        <div class="price-row">
+          <div class="price">EGP 74.99</div>
+          <div class="quantity-selector">
+            <button class="qty-btn" data-click="updateQty(-1)"><i class="fa-solid fa-minus"></i></button>
+            <span class="qty-num" id="qtyText">1</span>
+            <button class="qty-btn" data-click="updateQty(1)"><i class="fa-solid fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <div class="option-title">Size</div>
+          <ul class="size-list">
+            <li><button class="size-btn" data-click="selectSize(this)">38</button></li>
+            <li><button class="size-btn active" data-click="selectSize(this)">39</button></li>
+            <li><button class="size-btn" data-click="selectSize(this)">40</button></li>
+            <li><button class="size-btn" data-click="selectSize(this)">41</button></li>
+            <li><button class="size-btn" data-click="selectSize(this)">42</button></li>
+            <li><button class="size-btn" data-click="selectSize(this)">43</button></li>
+          </ul>
+        </div>
+
+        <div class="option-group">
+          <div class="option-title">Color</div>
+          <ul class="color-list">
+            <li><button class="color-btn active u-inline-4" data-click="selectColor(this)"></button></li>
+            <li><button class="color-btn u-inline-5" data-click="selectColor(this)"></button></li>
+            <li><button class="color-btn u-inline-6" data-click="selectColor(this)"></button></li>
+            <li><button class="color-btn u-inline-7" data-click="selectColor(this)"></button></li>
+          </ul>
+        </div>
+
+        <div class="option-group">
+          <div class="option-title">Description</div>
+          <p class="description-text">
+            Get ready to elevate your workout game with our Sport Sneakers. Engineered for maximum performance and comfort, these shoes are designed to support you through every intensive session...
+          </p>
+          <a href="404.html" class="read-more">Read more <i class="fa-solid fa-chevron-right u-inline-8"></i></a>
+        </div>
+
+        <div class="bottom-actions">
+          <button class="add-to-cart-btn" data-click="window.location.href='cart.html'"><i class="fa-solid fa-plus"></i> Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/pages/product.js"></script>
+  <script src="assets/js/inline-events.js"></script>
+</body>
+
+</html>

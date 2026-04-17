@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>HNU Plaza | Checkout</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/pages/checkout.css">
+      <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+   </head>
+   <body>
+      <div class="page-container">
+         <nav class="top-nav">
+            <a href="cart.html" class="back-btn mobile-only"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2 class="mobile-only">Checkout</h2>
+            <a href="index.html" class="desktop-logo-link">StepHub</a>
+            <ul class="desktop-links">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="shop.html">Shop</a></li>
+               <li><a href="404.html">Categories</a></li>
+               <li><a href="404.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+               <a href="profile.html" class="account-icon u-inline-1">
+               <i class="fa-regular fa-user"></i>
+               </a>
+            </div>
+         </nav>
+         <div class="checkout-layout">
+            <div class="checkout-left">
+               <div class="card">
+                  <div class="card-title"><i class="fa-solid fa-truck-fast u-inline-2"></i> Shipping Information</div>
+                  <div class="form-grid">
+                     <div class="input-group">
+                        <label>FULL NAME</label>
+                        <input type="text" placeholder="Enter your full name">
+                     </div>
+                     <div class="form-row-2">
+                        <div class="input-group">
+                           <label>EMAIL ADDRESS</label>
+                           <input type="email" placeholder="<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bedbc6dfd3ced2dbfed3dfd7d290ddd1d3">[email protected]</a>">
+                        </div>
+                        <div class="input-group">
+                           <label>PHONE NUMBER</label>
+                           <input type="tel" placeholder="+1 (234) 567-8900">
+                        </div>
+                     </div>
+                     <div class="input-group">
+                        <label>DELIVERY ADDRESS</label>
+                        <input type="text" placeholder="Street name, house number">
+                     </div>
+                     <div class="form-row-2">
+                        <div class="input-group">
+                           <label>CITY</label>
+                           <input type="text" placeholder="City">
+                        </div>
+                        <div class="input-group">
+                           <label>POSTAL CODE</label>
+                           <input type="text" placeholder="ZIP Code">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-title"><i class="fa-regular fa-credit-card u-inline-2"></i> Payment Method</div>
+                  <div class="payment-methods">
+                     <button class="payment-btn active" data-click="selectPayment(this)"><i class="fa-brands fa-cc-visa"></i></button>
+                     <button class="payment-btn" data-click="selectPayment(this)"><i class="fa-brands fa-cc-mastercard"></i></button>
+                     <button class="payment-btn" data-click="selectPayment(this)"><i class="fa-brands fa-cc-paypal"></i></button>
+                     <button class="payment-btn" data-click="selectPayment(this)"><i class="fa-brands fa-cc-apple-pay"></i></button>
+                  </div>
+                  <div class="form-grid">
+                     <div class="input-group">
+                        <label>CARD NUMBER</label>
+                        <input type="text" placeholder="0000 0000 0000 0000">
+                     </div>
+                     <div class="form-row-2">
+                        <div class="input-group">
+                           <label>EXPIRY DATE</label>
+                           <input type="text" placeholder="MM/YY">
+                        </div>
+                        <div class="input-group">
+                           <label>CVV</label>
+                           <input type="text" placeholder="&bull;&bull;&bull;">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="checkout-right">
+               <div class="card u-inline-3">
+                  <div class="card-title">My Order</div>
+                  <ul class="summary-list">
+                     <li class="summary-item">
+                        <span class="item-desc">1x Fresh Bakery, 39, Black</span>
+                        <span class="item-price">EGP 74.99</span>
+                     </li>
+                     <li class="summary-item">
+                        <span class="item-desc">1x Gum & Candy, 42, White</span>
+                        <span class="item-price">EGP 54.98</span>
+                     </li>
+                  </ul>
+                  <div class="divider"></div>
+                  <div class="totals-row">
+                     <span>Subtotal</span>
+                     <span>EGP 129.97</span>
+                  </div>
+                  <div class="totals-row">
+                     <span>Discount</span>
+                     <span>-EGP 0.00</span>
+                  </div>
+                  <div class="totals-row">
+                     <span>Delivery</span>
+                     <span class="u-inline-4">Free</span>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="totals-row final">
+                     <span>Total to pay</span>
+                     <span>EGP 129.97</span>
+                  </div>
+                  <a href="404.html" class="confirm-btn">Confirm Order</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="assets/js/pages/checkout.js"></script>
+      <script src="assets/js/inline-events.js"></script>
+   </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>HNU Plaza | Order</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+      <link rel="preload stylesheet" href="assets/css/style.css" as="style">
+      <link rel="preload stylesheet" href="assets/css/mobile.css" as="style">
+      <link rel="preload stylesheet" href="assets/css/global.css" as="style">
+      <link rel="preload stylesheet" href="assets/css/text.css" as="style">
+      <link rel="stylesheet" href="assets/css/pages/shop_index_order.css">
+   </head>
+   <body id="order">
+      <header class="header header__line">
+         <a href="index.html" class="header__left-icon" id="openModal">
+         <img src="assets/svg/go-back.svg" alt="go back icon">
+         </a>
+         <h4 class="header__mdl-element">Order</h4>
+         <a class="header__right-icon" href="order.html">
+         <img src="assets/svg/bag.svg" alt="basket">
+         <span class="header__total">0 Items</span>
+         </a>
+      </header>
+      <main>
+         <section class="products">
+            <ul class="products__list">
+               <li class="products__item">
+                  <div class="products__image-wrapper">
+                     <a href="javascript:void(0)" href="product.html" class="products__link">
+                     <img src="assets/images/sneaker.png" alt="Example Image" class="products__image u-inline-1">
+                     <img src="assets/svg/sale.svg" alt="sale" class="product__sale">
+                     </a>
+                  </div>
+                  <div class="products__info">
+                     <span class="products__title t14">Product Title</span>
+                     <span class="products__price">
+                     <span class="t12 old-price">EGP 89.99</span>
+                     <span class="t14 new-price">EGP 89.99</span>
+                     </span>
+                     <span class="products__description t14">Size: - 41</span>
+                     <span class="products__description t14">Color: White</span>
+                  </div>
+                  <div class="counter">
+                     <button>
+                     <img src="assets/svg/counter-plus.svg" alt="counter plus" class="counter__minus">
+                     </button>
+                     <span class="counter__number t16">1</span>
+                     <button>
+                     <img src="assets/svg/counter-minus.svg" alt="svg icon" class="counter__plus">
+                     </button>
+                  </div>
+               </li>
+               <li class="products__item">
+                  <div class="products__image-wrapper">
+                     <a href="product.html" class="products__link">
+                     <img src="assets/images/baked.png" alt="Example Image" class="products__image u-inline-1">
+                     </a>
+                  </div>
+                  <div class="products__info">
+                     <span class="products__title t14">Product Title</span>
+                     <span class="products__price">
+                     <span class="t14 price">EGP 89.99</span>
+                     </span>
+                     <span class="products__description t14">Size: - 41</span>
+                     <span class="products__description t14">Color: White</span>
+                  </div>
+                  <div class="counter">
+                     <button>
+                     <img src="assets/svg/counter-plus.svg" alt="counter plus" class="counter__minus">
+                     </button>
+                     <span class="counter__number t16">1</span>
+                     <button>
+                     <img src="assets/svg/counter-minus.svg" alt="svg icon" class="counter__plus">
+                     </button>
+                  </div>
+               </li>
+            </ul>
+         </section>
+         <section class="promocode container">
+            <label class="label">promocode</label>
+            <input type="text" class="input" placeholder="Promocode">
+            <a href="order-options.html" class="button">Apply</a>
+         </section>
+         <section class="summary">
+            <div class="summary__subtotal container">
+               <h5>Subtotal</h5>
+               <h5>EGP 129,97</h5>
+            </div>
+            <div class="summary__delivery container">
+               <span class="t16">Delivery</span>
+               <span class="t16 free">Free</span>
+            </div>
+            <div class="summary__total container">
+               <h4>Total</h4>
+               <h4>EGP 129,97</h4>
+            </div>
+         </section>
+         <section class="container button__wrapper">
+            <a href="shipping-and-payment-info.html" class="button light">Shipping & Payment info</a>
+         </section>
+      </main>
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+      <div class="sidebar" id="sidebar">
+         <button class="sidebar-close" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+         <div class="sidebar-header-wrapper">
+            <div class="sidebar-logo-line"></div>
+            <h2>Contact Us</h2>
+         </div>
+         <div class="sidebar-item">
+            <i class="fa-solid fa-location-dot icon"></i>
+            <div class="sidebar-item-text">
+               <span>Helwan National University</span>
+               <span>South of Helwan City,
+               Cairo Governorate</span>
+            </div>
+         </div>
+         <div class="sidebar-item">
+            <i class="fa-solid fa-envelope icon"></i>
+            <div class="sidebar-item-text">
+               <span>sale@hnu_plaza.com</span>
+               <span>support@hnu_plaza.com</span>
+            </div>
+         </div>
+         <div class="sidebar-item">
+            <i class="fa-solid fa-phone icon"></i>
+            <div class="sidebar-item-text">
+               <span>+20 1234567890</span>
+               <span>+20 9876543210</span>
+            </div>
+         </div>
+      </div>
+      <script src="assets/js/pages/order.js"></script>
+      <footer class="u-inline-2">
+         <ul class="u-inline-3">
+            <li class="u-inline-4">
+               <a href="index.html" class="u-inline-5">
+               <img src="assets/svg/home.svg" alt="home" class="u-inline-6">
+               </a>
+            </li>
+            <li class="u-inline-4">
+               <a href="categories.html" class="u-inline-5">
+               <img src="assets/svg/search.svg" alt="search" class="u-inline-6">
+               </a>
+            </li>
+            <li class="u-inline-4">
+               <a href="order.html" class="u-inline-5">
+               <img src="assets/svg/bag-active.svg" alt="bag" class="u-inline-6">
+               </a>
+            </li>
+            <li class="u-inline-4">
+               <a href="4O4.html" class="u-inline-5">
+               <img src="assets/svg/heart.svg" alt="wishlist" class="u-inline-6">
+               </a>
+            </li>
+            <li class="u-inline-4">
+               <a href="profile.html" class="u-inline-5">
+               <img src="assets/svg/user.svg" alt="user" class="u-inline-6">
+               </a>
+            </li>
+         </ul>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,162 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HNU Plaza | Cart</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/pages/cart.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+  <div class="page-container">
+
+
+    <nav class="top-nav">
+
+      <a href="shop.html" class="back-btn mobile-only"><i class="fa-solid fa-arrow-left"></i></a>
+      <h2 class="mobile-only">Order</h2>
+
+
+      <a href="index.html" class="desktop-logo-link">StepHub</a>
+      <ul class="desktop-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="404.html">Categories</a></li>
+        <li><a href="404.html">Contact</a></li>
+      </ul>
+
+
+      <div class="nav-actions">
+        <a href="profile.html" class="account-icon u-inline-1">
+          <i class="fa-regular fa-user"></i>
+        </a>
+      </div>
+    </nav>
+
+    <div class="cart-layout">
+
+
+      <div class="cart-items-container">
+        <div class="cart-list">
+
+          <div class="cart-item">
+            <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+            <a href="javascript:void(0)" href="javascript:void(0)" href="product.html" class="item-image">
+              <div class="sale-badge">-20%</div>
+              <img src="assets/images/baked.png" alt="product" class="u-inline-2">
+            </a>
+            <div class="item-details">
+              <div class="item-title">Fresh Bakery</div>
+              <div class="item-price"><span class="item-old-price">EGP 94.99</span> EGP 74.99</div>
+              <div class="item-meta">Size: 39</div>
+              <div class="item-meta">Color: Black</div>
+            </div>
+            <div class="item-counter">
+              <button data-click="updateCartQty(this, -1)"><i class="fa-solid fa-minus"></i></button>
+              <span>1</span>
+              <button data-click="updateCartQty(this, 1)"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+
+
+          <div class="cart-item">
+            <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+            <a href="product.html" class="item-image">
+              <img src="assets/images/gum.png" alt="product" class="u-inline-2">
+            </a>
+            <div class="item-details">
+              <div class="item-title">Gum & Candy</div>
+              <div class="item-price">EGP 54.98</div>
+              <div class="item-meta">Size: 42</div>
+              <div class="item-meta">Color: White</div>
+            </div>
+            <div class="item-counter">
+              <button data-click="updateCartQty(this, -1)"><i class="fa-solid fa-minus"></i></button>
+              <span>1</span>
+              <button data-click="updateCartQty(this, 1)"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cart-summary-container">
+        <div class="promocode-section">
+          <div class="summary-label u-inline-3">Promocode</div>
+          <div class="promocode-box">
+            <input type="text" placeholder="Enter promocode here">
+            <button class="promocode-btn">Apply</button>
+          </div>
+        </div>
+
+        <div class="summary-section">
+          <div class="summary-row">
+            <div class="summary-label">Subtotal</div>
+            <div class="summary-val">EGP 129.97</div>
+          </div>
+          <div class="summary-row">
+            <div class="summary-label">Delivery</div>
+            <div class="summary-val free">Free</div>
+          </div>
+          <div class="summary-row total">
+            <div class="summary-label">Total</div>
+            <div class="summary-val">EGP 129.97</div>
+          </div>
+        </div>
+
+        <div class="checkout-btn-wrapper">
+          <a href="checkout.html" class="checkout-btn">Shipping & Payment info</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <footer class="u-inline-4">
+      <ul class="u-inline-5">
+        <li class="u-inline-6">
+          <a href="index.html" class="u-inline-7">
+            <img src="assets/svg/home.svg" alt="home" class="u-inline-8">
+          </a>
+        </li>
+        <li class="u-inline-6">
+          <a href="categories.html" class="u-inline-7">
+            <img src="assets/svg/search.svg" alt="search" class="u-inline-8">
+          </a>
+        </li>
+        <li class="u-inline-6">
+          <a href="order.html" class="u-inline-7">
+            <img src="assets/svg/bag-active.svg" alt="bag" class="u-inline-8">
+          </a>
+        </li>
+        <li class="u-inline-6">
+          <a href="4O4.html" class="u-inline-7">
+            <img src="assets/svg/heart.svg" alt="wishlist" class="u-inline-8">
+          </a>
+        </li>
+        <li class="u-inline-6">
+          <a href="profile.html" class="u-inline-7">
+            <img src="assets/svg/user.svg" alt="user" class="u-inline-8">
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/pages/cart.js"></script>
+  <script src="assets/js/inline-events.js"></script>
+</body>
+
+</html>
